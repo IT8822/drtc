@@ -1,0 +1,313 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F1A7D1; /* Pozadina slična boji albuma Igor */
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #444;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.navbar .navbar-brand {
+    color: #ffd700; /* Zlatna boja za Tylerov brend */
+    font-weight: bold;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between; /* Raspoređuje stavke ravnomerno po celoj širini */
+    align-items: center; /* Vertikalno poravnavanje */
+    width: 100%;
+    padding: 0 20px; /* Dodatni padding na stranama */
+}
+
+.nav-item {
+    margin: 0 10px; /* Razmak između stavki */
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0; /* Uklanja marginu sa poslednjeg elementa */
+}
+
+/* Uklanjamo justify-content: flex-end */
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between; /* Raspoređuje stavke po širini */
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffd700; /* Zlatna boja */
+}
+
+#tyler-link {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffd700; /* Zlatna boja */
+    position: relative;
+    animation: moveAround 10s linear infinite;
+}
+
+@keyframes moveAround {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 80%;
+    }
+    50% {
+        top: 100%;
+        left: 80%;
+    }
+    75% {
+        top: 100%;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+#tyler-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Možete prilagoditi širinu slike po potrebi */
+    max-width: 500px; /* Maksimalna širina slike */
+}
+
+/* Main content sections */
+.container {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #222;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Album cards */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card img {
+    max-width: 100%;
+    border-bottom: 2px solid #333;
+}
+
+.card-body {
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+footer .social-links a {
+    color: #ddd;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #ffd700; /* Zlatna boja */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, p {
+    line-height: 1.5;
+}
+
+@media (max-width: 575.98px) {
+    body {
+        padding: 0 10px;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .container {
+        padding: 0;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    .header p {
+        font-size: 1rem;
+    }
+    .card {
+        margin-bottom: 15px;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+    .social-links a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+    .header p {
+        font-size: 1.2rem;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    .header p {
+        font-size: 1.3rem;
+    }
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .container {
+        max-width: 750px;
+    }
+    .card {
+        margin-bottom: 25px;
+    }
+    .social-links a {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 970px;
+    }
+    .header h1 {
+        font-size: 3rem;
+    }
+    .header p {
+        font-size: 1.5rem;
+    }
+    .row {
+        flex-direction: row;
+    }
+    .card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    .header h1 {
+        font-size: 3.5rem;
+    }
+    .header p {
+        font-size: 1.7rem;
+    }
+    .navbar-nav {
+        justify-content: space-between; /* Raspoređuje stavke ravnomerno */
+    }
+    .row {
+        flex-direction: row;
+    }
+    .card {
+        margin-bottom: 35px;
+    }
+}
+
